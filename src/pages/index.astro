@@ -4,10 +4,16 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
 import Lamp from "./assets/lamp.svg"
 import Icon from "./assets/icon.svg"
+
+import Background from "./assets/bg.webm"
 ---
 
 <BaseLayout>
-	<section class="min-h-screen flex flex-col justify-center bg-black text-white">
+	<section class="min-h-screen flex flex-col justify-center  text-white">
+		<video width="320" height="340" autoplay muted loop id="home-video" class="min-h-screen min-w-[100%] absolute z-[-100] object-cover">
+			<source src={Background} type="video/webm" />
+		</video>
+		<div class="min-h-[111vh] min-w-[100%] absolute z-[-99] object-cover bg-black opacity-60 "></div>
 		<article class="flex flex-col gap-6 m-12">
 			<article class="flex flex-col gap-4">
 				<h1 class="text-6xl uppercase font-extrabold font-montserrat flex items-center"><Image src={Icon} height={95} width={95} alt={"Logo de um templo Grego"}/>Filosofa<span class="font-semibold">.Ai</span></h1>
