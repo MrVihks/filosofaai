@@ -1,7 +1,19 @@
 ---
+import Image from "astro/components/Image.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
+
+import Lamp from "./assets/lamp.svg"
+import Icon from "./assets/icon.svg"
 ---
 
 <BaseLayout>
-	<h1 class="bg-red-500">Filosofa Ai</h1>
+	<section class="min-h-screen flex flex-col justify-center bg-black text-white">
+		<article class="flex flex-col gap-6 m-12">
+			<article class="flex flex-col gap-4">
+				<h1 class="text-6xl uppercase font-extrabold font-montserrat flex items-center"><Image src={Icon} height={95} width={95} alt={"Logo de um templo Grego"}/>Filosofa<span class="font-semibold">.Ai</span></h1>
+				<p class="text-3xl">Estamos em uma pandemia: <span class="font-bold">A ignorância.</span></p>
+			</article>
+			<a href="" class="flex items-center justify-center border-2 border-white gap-[24px] font-inter font-semibold text-2xl px-5 rounded-2xl h-[60px] w-[400px] hover:scale-105 duration-300"><Image src={Lamp} height={40} width={40} alt={"Logo de uma lâmpada"}/>Conheça nossa missão</a>
+		</article>
+	</section>
 </BaseLayout>
